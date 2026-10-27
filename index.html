@@ -266,14 +266,24 @@
       }
 
       try {
-        const res = await fetch(SCRIPT_URL);
+        // Adding ?_nocache= prevents the phone browser from serving stale cached responses
+        const cacheBuster = SCRIPT_URL + (SCRIPT_URL.includes('?') ? '&' : '?') + '_nocache=' + Date.now();
+        const res = await fetch(cacheBuster, { cache: "no-store" });
         const json = await res.json();
-        if (json.status === "success" && json.data.length > 0) {
-          renderList(json.data);
+        
+        if (json.status === "success") {
+          // If sheet is empty or only headers exist
+          if (!json.data || json.data.length === 0) {
+            localStorage.removeItem("offline_logs"); // Wipe local backup cache
+            renderList([]);
+          } else {
+            renderList(json.data);
+          }
         } else {
           renderLocalExpenses();
         }
       } catch (e) {
+        console.error("Fetch error:", e);
         renderLocalExpenses();
       }
     }
