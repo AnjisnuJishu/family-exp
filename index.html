@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Household Expense Tracker</title>
+  <title>Dhar Household</title>
+
+  <!-- iOS / Apple Home Screen Settings -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dhar Household">
+
+  <!-- Android / Chrome Theme Settings -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1e293b">
+
+  <!-- Custom House + ₹ App Icon (Embedded SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='120' fill='%230f766e'/%3E%3Cpath d='M256 95 L110 215 L150 215 L150 400 L362 400 L362 215 L402 215 Z' fill='%23134e4a'/%3E%3Cpath d='M256 120 L130 225 L165 225 L165 385 L347 385 L347 225 L382 225 Z' fill='none' stroke='white' stroke-width='18' stroke-linejoin='round'/%3E%3Ctext x='50%25' y='64%25' font-size='165' font-family='system-ui, sans-serif' font-weight='900' fill='white' dominant-baseline='middle' text-anchor='middle'%3E₹%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='120' fill='%230f766e'/%3E%3Cpath d='M256 95 L110 215 L150 215 L150 400 L362 400 L362 215 L402 215 Z' fill='%23134e4a'/%3E%3Cpath d='M256 120 L130 225 L165 225 L165 385 L347 385 L347 225 L382 225 Z' fill='none' stroke='white' stroke-width='18' stroke-linejoin='round'/%3E%3Ctext x='50%25' y='64%25' font-size='165' font-family='system-ui, sans-serif' font-weight='900' fill='white' dominant-baseline='middle' text-anchor='middle'%3E₹%3C/text%3E%3C/svg%3E">
+
+  <!-- Standalone Manifest for Fullscreen App Launch -->
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Dhar%20Household%22%2C%22short_name%22%3A%22Dhar%20Household%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f8fafc%22%2C%22theme_color%22%3A%22%230f766e%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%253E%253Crect%20width%3D'512'%20height%3D'512'%20rx%3D'120'%20fill%3D'%25230f766e'%2F%253E%253Cpath%20d%3D'M256%2095%20L110%20215%20L150%20215%20L150%20400%20L362%20400%20L362%20215%20L402%20215%20Z'%20fill%3D'%2523134e4a'%2F%253E%253Cpath%20d%3D'M256%20120%20L130%20225%20L165%20225%20L165%20385%20L347%20385%20L347%20225%20L382%20225%20Z'%20fill%3D'none'%20stroke%3D'white'%20stroke-width%3D'18'%20stroke-linejoin%3D'round'%2F%253E%253Ctext%20x%3D'50%2525'%20y%3D'64%2525'%20font-size%3D'165'%20font-family%3D'system-ui%2C%20sans-serif'%20font-weight%3D'900'%20fill%3D'white'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%253E%25E2%2582%25B9%253C%2Ftext%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { -webkit-tap-highlight-color: transparent; }
@@ -17,7 +32,7 @@
   <!-- Header -->
   <header class="bg-white border-b border-slate-200 px-4 py-3 sticky top-0 z-30 flex items-center justify-between">
     <div>
-      <h1 class="text-base font-bold text-slate-900 leading-tight">Family Expenses</h1>
+      <h1 class="text-base font-bold text-slate-900 leading-tight">Dhar Household</h1>
       <div id="syncStatus" class="text-[11px] text-emerald-600 font-medium flex items-center gap-1">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Cloud Synced
       </div>
