@@ -139,15 +139,111 @@
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjbZW3DI-8GgdWzgmQMzULQFsfQ1QKbudEa4QENnNIAUvbvTuHPzDv1dhPZSNhZzmH/exec";
 
     const CATEGORIES = [
-      { name: "Groceries", icon: "🛒", type: "Essential", need: "Need", sub: ["Daily needs", "Milk & dairy"] },
-      { name: "Utilities", icon: "💡", type: "Essential", need: "Need", sub: ["Electricity", "Gas / LPG"] },
-      { name: "Transport / Fuel", icon: "⛽", type: "Essential", need: "Need", sub: ["Fuel", "Auto / Taxi / Bus"] },
-      { name: "Medical / Pharmacy", icon: "💊", type: "Essential", need: "Need", sub: ["Medicines", "Doctor / Tests"] },
-      { name: "Mobile / Internet", icon: "📱", type: "Essential", need: "Need", sub: ["Mobile recharge", "Broadband"] },
-      { name: "Domestic Help", icon: "🧹", type: "Essential", need: "Need", sub: ["Ashim", "Radha", "Moni", "Jharna", "Dilip Da"] },
-      { name: "Dining / Takeaway", icon: "🍽️", type: "Discretionary", need: "Want", sub: ["Restaurant", "Food delivery"] },
-      { name: "Shopping", icon: "🛍️", type: "Discretionary", need: "Want", sub: ["Clothes", "Electronics"] },
-      { name: "Other", icon: "📦", type: "Personal / Misc", need: "Could Avoid", sub: ["Bank charges", "Repairs"] }
+      { 
+        name: "Groceries", 
+        icon: "🛒", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Vegetables", "Fish", "Mutton/Chicken", "Milk & dairy", "Cosmetics & Toiletries"] 
+      },
+      { 
+        name: "Domestic Help", 
+        icon: "🧹", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Ashim", "Radha", "Moni", "Jharna", "Rahul Garden", "Dilip Da", "Paper"] 
+      },
+      { 
+        name: "Utilities", 
+        icon: "💡", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Electricity", "Gas / LPG", "Water"] 
+      },
+      { 
+        name: "Mobile / Internet / Broadband", 
+        icon: "📱", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Mobile recharge", "Broadband"] 
+      },
+      { 
+        name: "Transport / Fuel", 
+        icon: "⛽", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Fuel", "Train / Auto / Taxi / Bus"] 
+      },
+      { 
+        name: "Medical / Pharmacy", 
+        icon: "💊", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Medicines", "Doctor / Tests"] 
+      },
+      { 
+        name: "Dining / Takeaway", 
+        icon: "🍽️", 
+        type: "Discretionary", 
+        need: "Want", 
+        sub: ["Restaurant", "Food delivery"] 
+      },
+      { 
+        name: "Shopping", 
+        icon: "🛍️", 
+        type: "Discretionary", 
+        need: "Want", 
+        sub: ["Clothes", "Electronics"] 
+      },
+      { 
+        name: "Subscriptions", 
+        icon: "📺", 
+        type: "Discretionary", 
+        need: "Want", 
+        sub: ["OTT / Streaming"] 
+      },
+      { 
+        name: "Home Maintenance", 
+        icon: "🔧", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Repairs / Maintainance"] 
+      },
+      { 
+        name: "Education", 
+        icon: "📚", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["School / College fees", "Tuition"] 
+      },
+      { 
+        name: "Insurance", 
+        icon: "🛡️", 
+        type: "Essential", 
+        need: "Need", 
+        sub: ["Insurance premium"] 
+      },
+      { 
+        name: "Gifts / Donations", 
+        icon: "🎁", 
+        type: "Personal / Misc", 
+        need: "Want", 
+        sub: ["Gift", "Donation"] 
+      },
+      { 
+        name: "Fees / Charges", 
+        icon: "🏦", 
+        type: "Personal / Misc", 
+        need: "Could Avoid", 
+        sub: ["Bank charges"] 
+      },
+      { 
+        name: "Other", 
+        icon: "📦", 
+        type: "Personal / Misc", 
+        need: "Could Avoid", 
+        sub: ["Other"] 
+      }
     ];
 
     let currentProfile = localStorage.getItem("active_profile") || "Tamal";
